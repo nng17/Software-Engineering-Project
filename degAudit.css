@@ -1,0 +1,41 @@
+
+h3 {
+	color: #CF0404;
+}
+
+h1 {
+	text-align: center;
+}
+
+h2 {
+	text-align: left;
+}
+
+.intro {
+	text-align: center;
+}
+
+#searchbox {
+	text-align: center;
+}
+
+#CoMaj {
+	border-style: inset;
+	width: 35%;
+	padding: 20px;
+	float: left;
+}
+
+#CORE	{
+	border-style: inset;
+	width: 55%;
+	padding: 20px;
+	float: right;
+}
+
+#OTHER	{
+	border-style: inset;
+	width: 55%;
+	padding: 20px;
+	float: right;
+}

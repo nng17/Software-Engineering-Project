@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<title>SCU Online Degree Audit</title>
+	<!-- CSS -->
+	<link href="degAudit.css" rel="stylesheet" type="text/css" >
+	<!-- Javascript -->
+	<script src="degAudit.js" type="text/javascript" ></script>
+
+</head>
+
+
+
+<body onload="restore();">
+	<h1 id="header_1">Welcome to the Online SCU Degree Audit</h1>
+	<p class="intro">In the MAJOR section, check which classes you have fulfilled.</p>
+	<p class="intro">In the CORE section, either enter a class you have taken in the search bar,</p>
+	<p class="intro">or select one of the example classes from the droplist.</p>
+	<br>
+
+
+	<!-- Search box -->
+	<div id="searchbox">
+		<input id="search" type="text" size="30" placeholder="Type in a class you have taken">
+		<button id="submit" onclick="submit();"> Submit</button>
+	</div>
+	<br>
+	<br>
+
+	<!-- For COEN Major Classes -->
+	<div class="row" id="CoMaj">
+
+  		<div class=" engr col-xs-6 col-sm-3">
+				<h2><b> COEN Major Classes</b></h3>
+				<h3><b> Engineering</b></h3>
+				<ul class="list-group">
+				  <li id="li_en1" class="list-group-item"> <input id="en1" type="checkbox" onclick="check_box('en1','li_en1');"> ENGR 1</li>
+				  <li id="li_c10" class="list-group-item"> <input id="c10" type="checkbox" onclick="check_box('c10','li_c10');"> COEN 10 </li>
+				  <li id="li_c11" class="list-group-item"> <input id="c11" type="checkbox" onclick="check_box('c11','li_c11');"> COEN 11 </li>
+				  <li id="li_c12" class="list-group-item"> <input id="c12" type="checkbox" onclick="check_box('c12','li_c12');"> COEN 12 </li>
+				  <li id="li_c20" class="list-group-item"> <input id="c20" type="checkbox" onclick="check_box('c20','li_c20');"> COEN 20 </li>
+				  <li id="li_c21" class="list-group-item"> <input id="c21" type="checkbox" onclick="check_box('c21','li_c21');"> COEN 21 </li>
+				  <li id="li_c70" class="list-group-item"> <input id="c70" type="checkbox" onclick="check_box('c70','li_c70');"> COEN 70 </li>
+				  <li id="li_c122" class="list-group-item"> <input id="c122" type="checkbox" onclick="check_box('c122','li_c122');"> COEN 122 </li>
+				  <li id="li_c146" class="list-group-item"> <input id="c146" type="checkbox" onclick="check_box('c146','li_c146');"> COEN 146 </li>
+				  <li id="li_c171" class="list-group-item"> <input id="c171" type="checkbox" onclick="check_box('c171','li_c171');"> COEN 171 </li>
+				  <li id="li_c174" class="list-group-item"> <input id="c174" type="checkbox" onclick="check_box('c174','li_c174');"> COEN 174 </li>
+				  <li id="li_c175" class="list-group-item"> <input id="c175" type="checkbox" onclick="check_box('c175','li_c175');"> COEN 175 </li>
+				  <li id="li_c177" class="list-group-item"> <input id="c177" type="checkbox" onclick="check_box('c177','li_c177');"> COEN 177 </li>
+				  <li id="li_c179" class="list-group-item"> <input id="c179" type="checkbox" onclick="check_box('c179','li_c179');"> COEN 179 </li>
+				  <li id="li_el50" class="list-group-item"> <input id="el50" type="checkbox" onclick="check_box('el50','li_el50');"> ELEN 50<br/> </li>
+				  <li id="li_el153" class="list-group-item"> <input id="el153" type="checkbox" onclick="check_box('el153','li_el153');"> ELEN 153<br/> </li>
+				  <li id="li_c194" class="list-group-item"> <input id="c194" type="checkbox" onclick="check_box('c194','li_c194');"> COEN 194<br/> </li>
+				  <li id="li_c195" class="list-group-item"> <input id="c195" type="checkbox" onclick="check_box('c195','li_c195');"> COEN 195<br/> </li>
+				  <li id="li_c196" class="list-group-item"> <input id="c196" type="checkbox" onclick="check_box('c196','li_c196');"> COEN 196<br/><br/> </li>
+				</ul>
+
+  		</div>
+
+
+
+
+  		<div class="col-xs-6 col-sm-3">
+			<h3><b> Engineering Electives</b></h3>
+			<ul class="list-group">
+			 <li id="li_e1" class="list-group-item">
+			  	Elective 1
+				<select id="e1" onchange="check_droplist('e1','li_e1'); ">
+						<option> </option>
+						<option value="COEN 145"> COEN 145</option>
+						<option value="COEN 148"> COEN 148</option>
+						<option value="COEN 150"> COEN 150</option>
+						<option value="COEN 160"> COEN 160</option>
+						<option value="COEN 161"> COEN 161</option>
+						<option value="COEN 162"> COEN 162</option>
+						<option value="COEN 163"> COEN 163</option>
+						<option value="COEN 163"> COEN 164</option>
+						<option value="COEN 180"> COEN 180</option>
+				</select>
+			 </li>
+
+
+ 			<li id="li_e2" class="list-group-item">
+				Elective 2
+				<select id="e2" onchange="check_droplist('e2','li_e2')">
+						<option> </option>
+						<option value="COEN 145"> COEN 145</option>
+						<option value="COEN 148"> COEN 148</option>
+						<option value="COEN 150"> COEN 150</option>
+						<option value="COEN 160"> COEN 160</option>
+						<option value="COEN 161"> COEN 161</option>
+						<option value="COEN 162"> COEN 162</option>
+						<option value="COEN 163"> COEN 163</option>
+						<option value="COEN 163"> COEN 164</option>
+						<option value="COEN 180"> COEN 180</option>
+				</select>
+			</li>
+
+
+
+			<li id="li_e3" class="list-group-item">
+				Elective 3
+				<select id="e3" onchange="check_droplist('e3','li_e3')">
+						<option> </option>
+						<option value="COEN 145"> COEN 145</option>
+						<option value="COEN 148"> COEN 148</option>
+						<option value="COEN 150"> COEN 150</option>
+						<option value="COEN 160"> COEN 160</option>
+						<option value="COEN 161"> COEN 161</option>
+						<option value="COEN 162"> COEN 162</option>
+						<option value="COEN 163"> COEN 163</option>
+						<option value="COEN 163"> COEN 164</option>
+						<option value="COEN 180"> COEN 180</option>
+					</select>
+			</li>
+			</ul>
+
+
+			<h3><b> Math and Science</b></h3>
+			<ul class="list-group">
+				<li id="li_m11" class="list-group-item"> <input id="m11" type="checkbox" onclick="check_box('m11','li_m11'); "> MATH 11 </li>
+				<li id="li_m12" class="list-group-item"> <input id="m12" type="checkbox" onclick="check_box('m12','li_m12'); "> MATH 12 </li>
+				<li id="li_m13" class="list-group-item"> <input id="m13" type="checkbox" onclick="check_box('m13','li_m13'); "> MATH 13 </li>
+				<li id="li_m14" class="list-group-item"> <input id="m14" type="checkbox" onclick="check_box('m14','li_m14'); "> MATH 14 </li>
+				<li id="li_m53" class="list-group-item"> <input id="m53" type="checkbox" onclick="check_box('m53','li_m53'); "> MATH 53 </li>
+				<li id="li_am106" class="list-group-item"> <input id="am106" type="checkbox" onclick="check_box('am106','li_am106'); "> AMTH 106 </li>
+				<li id="li_am108" class="list-group-item"> <input id="am108" type="checkbox" onclick="check_box('am108','li_am108'); "> AMTH 108 </li>
+				<li id="li_p31" class="list-group-item"> <input id="p31" type="checkbox" onclick="check_box('p31','li_p31'); "> PHYS 31 </li>
+				<li id="li_p32" class="list-group-item"> <input id="p32" type="checkbox" onclick="check_box('p32','li_p32'); "> PHYS 32 </li>
+				<li id="li_p33" class="list-group-item"> <input id="p33" type="checkbox" onclick="check_box('p33','li_p33'); "> PHYS 33 </li>
+				<li id="li_ch11" class="list-group-item"> <input id="ch11" type="checkbox" onclick="check_box('ch11','li_ch11'); "> CHEM 11 </li>
+			</ul>
+
+  		</div>
+
+</div>
+
+
+
+		<!-- For CORE Classes -->
+		<div class="row" id="CORE">
+  		<div class="col-xs-6 col-sm-3">
+				<h2><b> CORE Classes</b></h2>
+				<ul class="list-group">
+					<li id="li_ctw1" class="list-group-item">
+						CTW1
+						<select id="ctw1" onchange="check_droplist('ctw1','li_ctw1')">
+							<option></option>
+							<option value="ENGL 1A"> ENGL 1A</option>
+							<option value="ENGL 1H"> ENGL 1H</option>
+						</select>
+					</li>
+
+
+					<li id="li_ctw2" class="list-group-item">
+						CTW2
+						<select id="ctw2" onchange="check_droplist('ctw2','li_ctw2')">
+							<option></option>
+							<option value="ENGL 2A"> ENGL 2A</option>
+							<option value="ENGL 2H"> ENGL 2H</option>
+						</select>
+					</li>
+
+
+					<li id="li_ci1" class="list-group-item">
+						Culture & Ideas 1
+						<select id="ci1" onchange="check_droplist('ci1','li_ci1')">
+							<option></option>
+							<option value="ANTH 11A"> ANTH 11A</option>
+							<option value="ENGL 11A"> ENGL 11A</option>
+							<option value="ENGL 11B"> ENGL 11B</option>
+							<option value="HIST 11A"> HIST 11A</option>
+						</select>
+					</li>
+
+
+
+					<li id="li_ci2" class="list-group-item">
+						Culture & Ideas 2
+						<select id="ci2" onchange="check_droplist('ci2','li_ci2')">
+							<option></option>
+							<option value="ANTH 12A"> ANTH 12A</option>
+							<option value="ENGL 12A">ENGL 12A</option>
+							<option value="ENGL 12B">ENGL 12B</option>
+							<option value="HIST 12A">HIST 12A</option>
+						</select>
+					</li>
+
+
+					<li id="li_ci3" class="list-group-item">
+						Culture & Ideas 3
+						<select id="ci3" onchange="check_droplist('ci3','li_ci3')">
+							<option></option>
+							<option value="HIST 124A">HIST 124A</option>
+							<option value="PHIL 128A">PHIL 128A</option>
+						</select>
+					</li>
+
+
+					<li id="li_rtc1" class="list-group-item">
+						Religion 1
+						<select id="rtc1" onchange="check_droplist('rtc1','li_rtc1')">
+							<option></option>
+							<option value="RSOC 7">RSOC 7</option>
+							<option value="RSOC 9">RSOC 9</option>
+							<option value="TESP 2">TESP 2</option>
+							<option value="TESP 4">TESP 4</option>
+						</select>
+					</li>
+
+
+					<li id="li_rtc2" class="list-group-item">
+						Religion 2
+						<select id="rtc2" onchange="check_droplist('rtc2','li_rtc2')">
+							<option></option>
+							<option value="TESP 41">TESP 41</option>
+							<option value="RSOC 51">RSOC 51</option>
+						</select>
+					</li>
+
+
+					<li id="li_rtc3" class="list-group-item">
+						Religion 3
+						<select id="rtc3" onchange="check_droplist('rtc3','li_rtc3')">
+							<option></option>
+							<option value="SCTR 175R">SCTR 175R</option>
+							<option value="TESP 164">TESP 164</option>
+							<option value="TESP 184">TESP 184</option>
+						</select>
+					</li>
+
+
+
+					<li id="li_eth" class="list-group-item">
+						Ethics
+						<select id="eth" onchange="check_droplist('eth','li_eth')">
+							<option></option>
+							<option value="ENGR 19">ENGR 19</option>
+							<option value="TESP 157">TESP 157</option>
+							<option value="PHIL 2">PHIL 2</option>
+							<option value="PHIL 6">PHIL 6</option>
+						</select>
+					</li>
+
+
+
+
+					<li id="li_div" class="list-group-item">
+						Diveristy
+						<select id="div" onchange="check_droplist('div','li_div')">
+							<option></option>
+							<option value="SOCI 33">SOCI 33</option>
+							<option value="ETHN 30">ETHN 30</option>
+							<option value="ETHN 144">ETHN 144</option>
+							<option value="POLI 153">POLI 153</option>
+						</select>
+					</li>
+
+
+
+
+					<li id="li_ss" class="list-group-item">
+						Social Science
+						<select id="ss" onchange="check_droplist('ss','li_ss')">
+							<option></option>
+							<option value="ECON 1">ECON 1</option>
+							<option value="PSYC 1">PSYC 1</option>
+							<option value="SOCI 1">SOCI 1</option>
+							<option value="ANTH 2">ANTH 2</option>
+						</select>
+					</li>
+
+
+					<li id="li_elsj" class="list-group-item">
+						ELSJ
+						<select id="elsj" onchange="check_droplist('elsj','li_elsj')">
+							<option></option>
+							<option value="ANTH 3">ANTH 3</option>
+							<option value="LEAD 17">LEAD 17</option>
+							<option value="SOCI 30">SOCI 30</option>
+							<option value="ARTS 151">ARTS 151</option>
+						</select>
+					</li>
+
+					<li id="li_advw" class="list-group-item">
+						Advanced Writing
+						<select id="advw" onchange="check_droplist('advw','li_advw')">
+							<option></option>
+							<option value="ENGL 181">ENGL 181</option>
+							<option value="ENGL 16">ENGL 16</option>
+							<option value="ENGL 115H">ENGL 115H</option>
+							<option value="PHYS 151">PHYS 151</option>
+						</select>
+					</li>
+				</ul>
+  		</div>
+
+</div>
+
+<!-- For Other Classes -->
+<div class="row" id="OTHER">
+		<div class="col-xs-6 col-sm-3">
+			<h2><b> Other Classes</b></h2>
+				<ul id="others" class="list-group">
+					<li id="li_ee1" class="list-group-item"> <input id="ee1" type="text" onkeydown="check_text('ee1','li_ee1');"> </li>
+					<li id="li_ee2" class="list-group-item"> <input id="ee2" type="text" onkeydown="check_text('ee2','li_ee2');"> </li>
+					<li id="li_ee3" class="list-group-item"> <input id="ee3" type="text" onkeydown="check_text('ee3','li_ee3');"> </li>
+					<li id="li_ee4" class="list-group-item"> <input id="ee4" type="text" onkeydown="check_text('ee4','li_ee4');"> </li>
+					<li id="li_ee5" class="list-group-item"> <input id="ee5" type="text" onkeydown="check_text('ee5','li_ee5');"> </li>
+					<li id="li_ee6" class="list-group-item"> <input id="ee6" type="text" onkeydown="check_text('ee6','li_ee6');"> </li>
+				</ul>
+
+
+		</div>
+
+
+	</div>
+
+</body>
+</html>
